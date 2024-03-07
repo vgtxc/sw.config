@@ -1,0 +1,285 @@
+{
+    // lastEdit=>2024.03.07-15:39
+    // 颜色主题
+    "workbench.colorTheme": "Default High Contrast",
+    // python插件设置
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    // ******************************************************************
+    // *************highlight插件设置(fabiospampinato.com)****************
+    // **************注意:不要随意更换代码顺序,以免匹配混乱********************
+    "highlight.regexes": {
+        // 01.01.关键字-英文(keyword.eng)
+        "(creat:|add:|del:|change:|rename:|update:|move:|edit:|rebuild:)(.*)": {
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#ffe119"},
+                {"color": "#aacde1"},
+            ]
+        },
+        "(lastEdit=>|date:|time:)(.*)": {
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#42d4f4"},
+                {"color": "#4363d8"},
+            ]
+        },
+        // 01.02.关键字-学术文献(keyword.acad)
+        "(content:|title:|keyword:|autor:|doi:|arxiv:|IF:|pubTime:|pubOrg:|pubPaper:)(.*)": {
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#ffe119"},
+                {"color": "#aacde1"},
+            ]
+        },
+        "(struct:|direct:|eg:)(.*)": {
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#ffe119"},
+                {"color": "#aacde1"},
+            ]
+        },
+        // 01.03.关键字-日期(keyword.time)
+        "(\\t*\\d{4,4}\\.\\d{2,2}\\.\\d{2,2})": {
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#42d4f4"}
+            ]
+        },
+        "(\\t*\\d{4,4}\\.\\d{2,2}\\.\\d{2,2}-\\d{2,2}:\\d{2,2})": {
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#42d4f4"}
+            ]
+        },
+        // 01.05.关键字-域名,链接(keyword.url)
+        "(http(s?)://.*\\..+)": {   // url链接
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#64ffdd"}            ]
+        },
+        "(magnet:\\?xt=urn:btih:.*)": {     // 磁力前缀
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#48bdba"}            ]
+        },
+        "(@(gmail|outlook|yandex|foxmail|qq|163|189|stu\\.hubu\\.edu)\\.(com|cn|net|xyz))": {   // 邮箱后缀
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#48bdba"}            ]
+        },
+        // 01.04.关键字-文件,路径(keyword.path)
+        // "((\\.|[a-z,A-Z]:)/[\\d,\\w,\\-,\\,,\\#,\\(,\\),\\.,~,\\[,\\], ,_,/]*)": {  // 路径
+        //     "regexFlags": "gi",
+        //     "filterLanguageRegex":"plaintext",
+        //     "filterFileRegex": ".*\\.txt",
+        //     "decorations": [
+        //         {"color": "#bfdeff"}
+        //     ]
+        // },
+        // "([\\d,\\w,\\-,\\,,\\#,\\(,\\),\\.,~,\\[,\\], ,_,！,？,：]*\\.(7z|zip|rar|html|c|cpp|h|py|go|js|md|txt|pdf|doc|docx|ppt|pptx|xls|xlsx|jpg|png|bmp|jpeg|svg|mp4|mkv|mp3|flac|exe))": {   //文件名
+        //     "regexFlags": "gi",
+        //     "filterLanguageRegex":"plaintext",
+        //     "filterFileRegex": ".*\\.txt",
+        //     "decorations": [
+        //         {"color": "#bfdeff"}
+        //     ]
+        // },
+        // 02.02.符号-标题标号,百分数,小数(symbol.num)
+        "(\\d+\\.\\d+)": {     //小数
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#ffec3b"}
+            ]
+        },
+        "(\\d+\\.\\d+%)": {     //百分数
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#ffec3b"}
+            ]
+        },
+        "(\\d+(\\.\\d+)?E[\\+|-]\\d+(\\.\\d+)?)": {     //科学计数法
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#ffec3b"}
+            ]
+        },
+        "(\\d+\\.(\\d+\\.)?(\\d+\\.)?)": {   // 数字一二三级标题
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#ffec3b"}
+            ]
+        },
+        "([零|一|二|三|四|五|六|七|八|九]+\\.([零|一|二|三|四|五|六|七|八|九]+\\.)?([零|一|二|三|四|五|六|七|八|九]+\\.)?)": {   // 数字一二三级标题
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#ffec3b"}
+            ]
+        },
+        // 02.03.符号-括号(symbol.bracket)
+        "(\\<[^\\<&^\\>]*\\>)": {   // 尖括号
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#ff6565"}
+            ]
+        },
+        "(\\([^\\<&^\\>]*\\))": {   // 圆括号
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#7bf5e8"}
+            ]
+        },
+        "(\\[[^\\<&^\\>]*\\])": {   // 方括号
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#60aeff"}
+            ]
+        },
+        "(\\{[^\\<&^\\>]*\\})": {   // 花括号
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#c05cff"}
+            ]
+        },
+        // 02.04.符号-分隔符(symbol.split)
+        "(\\*{5,})": {
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#ea5916"}
+            ]
+        },
+        // 02.05.符号-目录符(symbol.catalog)
+        "(\\|-(--)?)": {
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#ea5916"}
+            ]
+        },
+        
+        // 03.01.语句-说明语句(syntax.explain)
+        "(info->|obj->|way->|sta->|prc->|par->|arg->|prt->|cnd->|env->)(.*)": { // 信息语句
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#00a0f0"},
+                {"color": "#ffcf5f"}
+            ]
+        },
+        "(lgc->|def->|tho->|clas->|prof->|infe->|judg->|cmpa->)(.*)": { // 逻辑语句
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#0fff00"},
+                {"color": "#d57012"}
+            ]
+        },
+        "(syb->|vgt->)(.*)": { // 抽象语句,未定语句
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#3bf112"},
+                {"color": "#4c08f7"}
+            ]
+        },
+        // 03.02.语句-标记语句(symbol.sign)
+        "(imp->|#->)(.*)": { // 重点标记
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#ff0000"},
+                {"color": "#ff0000"}
+            ]
+        },
+        "(sig->|@->)(.*)": { // 次重点标记
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#eeb0ff"},
+                {"color": "#eeb0ff"}
+            ]
+        },
+        "(qus->|ans->)(.*)": { // 疑问标记,回答标记
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#c05cff"},
+                {"color": "#ade074"}
+            ]
+        },
+        // 02.01.符号-纯符号(symbol.math)
+        "(=>|->|\\*>|\\:|\\^|\\!|\\&|\\%|\\*|\\\\|/|-|\\+|=|_|;|void|nil|etc)": {
+            "regexFlags": "gi",
+            "filterLanguageRegex":"plaintext",
+            "filterFileRegex": ".*\\.txt",
+            "decorations": [
+                {"color": "#00ff00"}
+            ]
+        },
+    },
+    "extensions.ignoreRecommendations": true,
+    "settingsSync.ignoredExtensions": [
+        "ms-vscode.cpptools",
+        "golang.go",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-python.vscode-pylance",
+        "ms-python.python"
+    ],
+    "terminal.integrated.fontFamily": "monospace",
+    "highlight.decorations": {
+
+
+
+
+
+        "rangeBehavior": 3
+    },
+    // ********************************
+}
