@@ -19,3 +19,7 @@ vscode配置文件:
 		name:Highlight
 		autor:Fabio Spampinato
 		url:fabiospampinato.com
+
+winbat脚本文件:
+	env.bat:
+		windows系统path环境变量设置脚本
